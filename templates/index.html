@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hello Robin</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-  </head>
-  <body>
-  <section class="section has-text-centered">
-    <figure class="image container is-128x128">
-        <img class="is-rounded" src="https://media-exp1.licdn.com/dms/image/C4E03AQGZ28Ca3jDwFQ/profile-displayphoto-shrink_400_400/0/1617955704223?e=1625097600&v=beta&t=ZyN4zzQ9IqWIU3c4LxWyNsQgiw_2RuuvcS4FKEPWKOM"/>
-    </figure>
-    <p class="title">Niklas Nielsen</p>
-    <p class="subtitle">Jag är en devops student</p>
-    <a class="button is-info is-outlined is-rounded" href={{url_for('contact')}}>Contact</a>
-    <a class="button is-black is-outlined is-rounded" href="https://github.com/Sinjebos?tab=repositories">Github</a>
-  </section>
-  <section class="columns">
-    <div class="column is-three-fifths is-offset-one-fifth has-background-light">
-        <div class="columns">
-            <div class="column is=half">
-                <div class="card m-3"> 
-                    <div class="card-content has-background-danger">
-                        <h1 class="title">About</h1>
-                        {{profile.About|safe}}
+</head>
+
+<body style="background-color: black">
+    <section class="section has-text-centered">
+        <figure class="image container is-128x128">
+            <img class="is-rounded"
+                src="https://media-exp1.licdn.com/dms/image/C4E03AQGZ28Ca3jDwFQ/profile-displayphoto-shrink_400_400/0/1617955704223?e=1625097600&v=beta&t=ZyN4zzQ9IqWIU3c4LxWyNsQgiw_2RuuvcS4FKEPWKOM" />
+        </figure>
+        <p class="title">Niklas Nielsen</p>
+        <p class="subtitle">Jag är en devops student</p>
+        <a class="button is-info is-outlined is-rounded" href={{url_for('contact')}}>Contact</a>
+        <a class="button is-black is-outlined is-rounded" href="https://github.com/Sinjebos?tab=repositories">Github</a>
+    </section>
+    <section class="columns">
+        <div class="column is-three-fifths is-offset-one-fifth has-background-light">
+            <div class="columns">
+                <div class="column is=half">
+                    <div class="card m-3">
+                        <div class="card-content has-background-danger">
+                            <h1 class="title">About</h1>
+                            {{profile.About|safe}}
+                        </div>
+                    </div>
+                    <div class="card m-3">
+                        <div class="card-content has-background-warning">
+                            <h1 class="title">Intrests</h1>
+                            {{profile.Intrests|safe}}
+                        </div>
                     </div>
                 </div>
-                <div class="card m-3"> 
-                    <div class="card-content has-background-warning">
-                        <h1 class="title">Intrests</h1>
-                        {{profile.Intrests|safe}}
+                <div class="column is=half">
+                    <div class="card m-3">
+                        <div class="card-content has-background-info">
+                            <h1 class="title">Experience</h1>
+                            {{profile.Experience|safe}}
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="column is=half">
-                <div class="card m-3"> 
-                    <div class="card-content has-background-info">
-                        <h1 class="title">Experience</h1>
-                        {{profile.Experience|safe}}
-                    </div>
-                </div>
-                <div class="card m-3"> 
-                    <div class="card-content has-background-primary">
-                        <h1 class="title">Education</h1>
-                        {{profile.Education|safe}}
+                    <div class="card m-3">
+                        <div class="card-content has-background-primary">
+                            <h1 class="title">Education</h1>
+                            {{profile.Education|safe}}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-  </section>
-  </body>
+    </section>
+</body>
+
 </html>
